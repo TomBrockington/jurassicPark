@@ -1,0 +1,42 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+}
+:root { 
+    --1:#ff000093;
+    --2: #ffff00a6;
+    --3: #0bb42fa6;
+    --4: #0b38b4a6;
+    --5: #b40b8fa6;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--1);
+
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: var(--2);
+    width: 500px;
+
+    display: grid;
+    place-items: center;
+}
+
+.container > * {
+    padding: 1rem;
+}
+
+button {
+    padding: 1rem;
+}
