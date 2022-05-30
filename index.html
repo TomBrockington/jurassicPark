@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jurrasic Park Game</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="invintory-container">
+        ITEMS
+    </div>
+
+    <div class="container" onload="initialState()">
+        <div class="island">
+            Welcome to 
+            <br>
+            <span id="location"></span>
+        </div>
         <div class="name">
             My Name Is: <span id="name">Dr</span>
         </div>
         <div class="health">
             HEALTH: <span id="health">100</span>
+        </div>
+        <div class="voltage">
+            Can take: <span id="voltage"></span> Volts!
         </div>
         
 

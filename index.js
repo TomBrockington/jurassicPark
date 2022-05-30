@@ -1,6 +1,6 @@
 const palentologist = {
     name: 'Dr Alan Grant',
-    Location: 'Isla Sorna',
+    location: 'Isla Sorna',
     health: 100,
     canTakeVoltage: 49999
 }
@@ -13,9 +13,37 @@ const dinosaurs = [
     'Cera'
 ]
 
-console.log(`Weclome to Beautiful ${palentologist.Location}`) 
+console.log(`Weclome to Beautiful ${palentologist.location}`) 
 
 console.log(palentologist.name + ' - Starting health ' + palentologist.health)
+
+let displayHealth = {
+    updateHealth: function() {
+        document.getElementById("health").innerHTML = palentologist.health;
+    },
+}
+let displayName = {
+    updateName: function() {
+        document.getElementById("name").innerHTML = palentologist.name;
+    },
+}
+let displayVoltage = {
+    updateVoltage: function() {
+        document.getElementById("voltage").innerHTML = palentologist.canTakeVoltage;
+    },
+}
+let displayLocation = {
+    updateLocation: function() {
+        document.getElementById("location").innerHTML = palentologist.location;
+    },
+}
+
+function initialState() {
+    displayHealth.updateHealth();
+    displayName.updateName();
+    displayVoltage.updateVoltage();
+    displayLocation.updateLocation();
+}
 
 function attack() {
     if (palentologist.health <= 200 && palentologist.health >= 50) {
@@ -23,20 +51,20 @@ function attack() {
         totalDamage = 0
         console.log('LOOK OUT!')
         attacker = dinosaurs[Math.floor(Math.random()*dinosaurs.length)];
-    
+
+        /// find somewhere to initialise these
+        displayHealth.updateHealth();
+        displayName.updateName();
+        displayVoltage.updateVoltage();
+        displayLocation.updateLocation();
+
+
         for (let i = 1; i <= Math.floor(Math.random() * 5) + 1; i++) {
             numAttacks++
             damage = Math.floor(Math.random() * 5) +1
             totalDamage += damage 
-            displayHealth.updateHealth();
-            displayName.updateName();
+            
             console.log('Single Attack Damage = ' + damage)
-
-            // if ((Math.floor(Math.random() * 5) + 1) >= 2) {
-            //     palentologist.health += 1
-            //     console.log(palentologist.health + ' if health')
-            //     return `got a health pack`
-            // }    
         };
     
         console.log(`${attacker} Attacks ${numAttacks} times! And does ${totalDamage} total damage!`)
@@ -56,42 +84,4 @@ function addHealth() {
 
 }
 
-let displayHealth = {
-    updateHealth: function() {
-        document.getElementById("health").innerHTML = palentologist.health;
-        
-    },
-}
-
-let displayName = {
-    updateName: function() {
-        document.getElementById("name").innerHTML = palentologist.name;
-    },
-}
-
-// console.log(attack())
-// console.log(attack())
-// console.log(attack())
-// console.log(addHealth())
-// console.log(attack())
-// console.log(attack())
-// console.log(attack())
-// console.log(addHealth(5))
-// console.log(attack())
-// console.log(attack())
-// console.log(attack())
-// console.log(attack())
-
 console.log('Final Health = ' + palentologist.health)
-
-// function attack() {
-//     if (health <= 100) {
-//         for (let i = 0; i < 5; i++) {
-//         return health = health - 1
-//         //log each attack
-//         console.log(health + ' Lost')
-//     }
-// }}
-
-// console.log('Total Health at end = ' + health)
-// attack()
