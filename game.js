@@ -9,14 +9,14 @@ const paleontologist = {
     money: 100,
     invintory: [
         {itemName: 'Firework', attackAdd: 10, itemQuantity: 1},
-        {itemName: 'Mobile Phone', signal: false, itemQuantity: 1},
-        {itemName: 'DNA Sample', value: 1000000, itemQuantity: 1},
-        {itemName: 'Dino Pee', defence: 10, itemQuantity: 1},
-        {itemName: 'Robot Arm', value: 5000, itemQuantity: 1},
-        {itemName: 'Water Bottle', thirst: 10, itemQuantity: 1},
-        {itemName: 'Dino Claw', attackAdd: 5, itemQuantity: 1},
-        {itemName: 'Small Health Pack', healthAdd: 10, itemQuantity: 1},
-        {itemName: 'Rubber Gloves', voltageAdd: 1, itemQuantity: 10}
+        // {itemName: 'Mobile Phone', signal: false, itemQuantity: 1},
+        // {itemName: 'DNA Sample', value: 1000000, itemQuantity: 1},
+        // {itemName: 'Dino Pee', defence: 10, itemQuantity: 1},
+        // {itemName: 'Robot Arm', value: 5000, itemQuantity: 1},
+        // {itemName: 'Water Bottle', thirst: 10, itemQuantity: 1},
+        // {itemName: 'Dino Claw', attackAdd: 5, itemQuantity: 1},
+        // {itemName: 'Small Health Pack', healthAdd: 10, itemQuantity: 1},
+        // {itemName: 'Rubber Gloves', voltageAdd: 1, itemQuantity: 10}
     ],
     weapons: [
         {weaponName: 'BFG', attackDamage: 30},
